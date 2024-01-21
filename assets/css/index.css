@@ -25,7 +25,7 @@ body {
 }
 
 #faq-header-icon {
-    width: 25px;
+    width: 35px;
     margin: 10px 30px 0 10px;
 }
 
@@ -34,33 +34,51 @@ body {
 }
 
 /* FAQ Question Block Styling */
-.question-section {
-    display: flex;
-    justify-content: end;
-    /* flex-direction: space-between; */
+.faq-questions {
+    border-bottom: 2px solid gray;
 }
 
-.faq-questions {
+.question-section {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: flex-end; */
+    align-items: center;
+    background-color: white;
+    border: none;
+    width: 100%;
+    padding: 0 10px;
 }
 
 .question-text {
-    display: flex;
-    justify-content: start;
+    width: 80%;
+    text-align: start;
+    /* padding: 0 100px 0 10px; */
+    /* display: flex;
+    justify-content: start; */
 }
 
 .question-icon {
+    width: 20%;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
-    margin-left: 50px;
+    padding-right: 10px;
+}
+
+.question-answer {
+    width: 90%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.question-answer p {
+    margin: 10px 0;
 }
 
 /* Footer Attribution Styling Section */
 .attribution { 
     font-size: 11px;
-    text-align: center; 
+    text-align: center;
+    margin-top: 20px;
 }
 
 .attribution a { 
