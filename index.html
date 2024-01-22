@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="./assets/css/index.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <title>FAQs</title>
 </head>
 <body>
@@ -19,7 +22,8 @@
           <h2>What is Frontend Mentor and how will it help me?</h2>
         </div>
         <div class="question-icon">
-          <img 
+          <img
+            class="question-icon-img" 
             src="./assets/images/icon-plus.svg"
             alt="Plus icon to let the reader expand the section to see the FAQ answer"
           >
@@ -57,10 +61,30 @@
       </div>
       <p>Answer to Question 4 brilliantly worded to sell Frontend Mentor lol</p>
     </div> -->
-  </div>
+  </section>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+    <p>Coded by <a href="https://github.com/jenidub">JeniDub</a>.</p>
   </div>
+  <script>
+    var coll = document.getElementsByClassName("question-section");
+    var icon = document.getElementsByClassName("question-icon-img");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      let currentIcon = icon[i];
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          currentIcon.src="./assets/images/icon-plus.svg"
+          content.style.display = "none";
+        } else {
+          currentIcon.src="./assets/images/icon-minus.svg"
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
 </body>
 </html>
